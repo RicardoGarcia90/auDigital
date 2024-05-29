@@ -1,8 +1,11 @@
+import React from 'react';
+import Rota from './routes';
+
 function App() {
   return (
-    <>
-      <p className="bg-red-400">AuDigital</p>
-    </>
+    <div className="font-nunito">
+      <Rota />
+    </div>
   );
 }
 
