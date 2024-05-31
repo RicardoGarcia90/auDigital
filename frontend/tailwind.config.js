@@ -11,7 +11,9 @@ export default {
         bgTheme: '#F5F5F5',
         bgCard: '#CCCCCC',
         textColor: '#333333',
-        appBlue: '#004AAD',
+        blue: '#004AAD',
+        blueLight: '#4896FD',
+        greenLight: '#65D89F',
       },
       container: {
         center: true,
