@@ -1,30 +1,30 @@
 import React from 'react';
-import logo from '../../assets/imagens/logo-svg-semFundo.svg';
+import loginImg from '../../assets/imagens/login-img.png';
 
 import LoginForm from './LoginForm';
 
 const Login = () => {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="bg-bgCard p-6 rounded-lg shadow-lg">
-          {/* HEADER LOGIN CARD */}
-          <div className="flex items-end">
-            <div>
-              <h1 className="text-3xl font-bold">Login</h1>
-              <p>Preencha os campos para entrar.</p>
-            </div>
-            <img
-              src={logo}
-              alt="Logo AuDigital na tela de login"
-              className="w-28 h-28"
-            />
+      <div className="flex justify-center items-center py-24 gap-3">
+        <div className="bg-white grid grid-cols-2 items-center w-9/12 shadow-2xl">
+          {/* IMAGEM LOGIN */}
+          <div>
+            <img src={loginImg} alt="Imagem de login" />
           </div>
 
           {/* FORM */}
-          <LoginForm />
+          <div className="px-36">
+            <h3 className="text-center text-3xl font-bold mb-3">Login</h3>
+            <p className="text-center">Preencha os campos para acessar</p>
+            <LoginForm />
+          </div>
         </div>
       </div>
+
+      {/* -------------------------- */}
+      {/* AJUSTAR RESPONSIVIDADE */}
+      {/* -------------------------- */}
     </>
   );
 };

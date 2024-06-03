@@ -12,7 +12,10 @@ const ResetPassword = () => {
           <div className="flex items-end">
             <div>
               <h1 className="text-3xl font-bold">Resetar senha</h1>
-              <p>Preencha os campos para entrar.</p>
+              <p>
+                Informe seu e-mail para que possamos enviar uma nova definição
+                de senha.
+              </p>
             </div>
             <img
               src={logo}
@@ -29,4 +32,4 @@ const ResetPassword = () => {
   );
 };
 
-export default Login;
+export default ResetPassword;
