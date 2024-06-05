@@ -58,7 +58,7 @@ const LoginForm = () => {
 
         {/* PASSWORD RESET LINK AND BUTTON LOGIN*/}
         <div className="flex justify-around items-center mt-5">
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-sm min-[1110px]:text-base">
             <span>Esqueceu a senha?</span>
             <Link
               to="/reset"
@@ -68,7 +68,7 @@ const LoginForm = () => {
             </Link>
           </div>
 
-          <button className="bg-primary px-6 py-3 rounded-lg shadow-sm hover:bg-greenLight">
+          <button className="bg-primary px-4 py-2 min-[1110px]:px-6 min-[1110px]:py-3 rounded-lg shadow-sm hover:bg-greenLight">
             <FaArrowRightLong className="text-white" />
           </button>
         </div>
