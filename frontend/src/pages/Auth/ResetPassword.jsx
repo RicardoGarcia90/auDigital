@@ -1,34 +1,22 @@
 import React from 'react';
-import logo from '../../assets/imagens/logo-svg-semFundo.svg';
-
+import resetImg from '../../assets/imagens/reset-img.png';
+import CardAuth from './CardAuth';
 import ResetPasswordForm from './ResetPasswordForm';
+import SectionForm from './SectionForm';
 
 const ResetPassword = () => {
   return (
-    <>
-      <div className="flex items-center justify-center min-h-screen mx-2">
-        <div className="bg-bgCard p-6 rounded-lg shadow-lg">
-          {/* HEADER LOGIN CARD */}
-          <div className="flex items-end">
-            <div>
-              <h1 className="text-3xl font-bold">Resetar senha</h1>
-              <p>
-                Informe seu e-mail para que possamos enviar uma nova definição
-                de senha.
-              </p>
-            </div>
-            <img
-              src={logo}
-              alt="Logo AuDigital na tela de login"
-              className="w-28 h-28"
-            />
-          </div>
-
-          {/* FORM */}
-          <ResetPasswordForm />
-        </div>
+    <CardAuth>
+      {/* IMAGEM RESET */}
+      <div>
+        <img src={resetImg} alt="Imagem de login" />
       </div>
-    </>
+
+      {/* FORM RESET */}
+      <SectionForm textH3={'Esqueceu sua senha?'} textP={'Informe seu e-mail'}>
+        <ResetPasswordForm />
+      </SectionForm>
+    </CardAuth>
   );
 };
 

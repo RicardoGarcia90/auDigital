@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .invalid {
+    @apply p-1 border-b w-full  border-red-600 outline-none placeholder-red-600 bg-transparent;
+  }
+
+  .valid {
+    @apply p-1 border-b w-full  border-textColor focus:border-primary outline-none placeholder-textColor bg-transparent;
+  }
+}

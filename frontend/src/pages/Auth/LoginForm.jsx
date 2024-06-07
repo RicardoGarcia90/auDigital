@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
@@ -7,26 +7,53 @@ import { MdKey } from 'react-icons/md';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [validEmail, setValidEmail] = useState(true);
+  const [validPassword, setValidPassword] = useState(true);
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [passwordTouched, setPasswordTouched] = useState(false);
 
-  const isValidEmail = email.includes('@') && email.includes('.com');
-  const isValidPassword = password.length >= 6;
+  useEffect(() => {
+    if (emailTouched) {
+      const isValidEmail =
+        email.length > 0 && email.includes('@') && email.includes('.com');
+      setValidEmail(isValidEmail);
+    }
+
+    if (passwordTouched) {
+      const isValidPassword = password.length >= 6;
+      setValidPassword(isValidPassword);
+    }
+  }, [email, password, emailTouched, passwordTouched]);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!isValidEmail && !isValidPassword) {
-      alert('Por favor insira seu e-mail e sua senha para acessar.');
-    } else if (!isValidEmail && isValidPassword) {
-      alert('Digite um email válido!');
-    } else if (isValidEmail && !isValidPassword) {
-      alert('Digite uma senha válida (Mínimo 6 digitos)!');
-    } else {
+    setEmailTouched(true);
+    setPasswordTouched(true);
+
+    const isValidEmail =
+      email.length > 0 && email.includes('@') && email.includes('.com');
+    const isValidPassword = password.length >= 6;
+
+    if (isValidEmail && isValidPassword) {
       const user = { email: email, password: password };
       console.log(user);
+      setEmail('');
+      setPassword('');
+      setEmailTouched(false);
+      setPasswordTouched(false);
     }
+  }
 
-    setEmail('');
-    setPassword('');
+  let message;
+  if (emailTouched && passwordTouched) {
+    if (!validEmail && !validPassword) {
+      message = 'Digite um email e uma senha para entrar.';
+    } else if (!validEmail) {
+      message = 'Digite um email válido!';
+    } else if (!validPassword) {
+      message = 'Digite uma senha válida (Mínimo 6 dígitos)!';
+    }
   }
 
   return (
@@ -37,9 +64,12 @@ const LoginForm = () => {
             type="text"
             name="email"
             placeholder="E-mail"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setEmailTouched(true);
+            }}
             value={email}
-            className="p-1 border-b w-full  border-textColor focus:border-primary outline-none placeholder-textColor bg-transparent"
+            className={emailTouched && !validEmail ? 'invalid' : 'valid'}
           />
           <IoPerson className="absolute right-3 top-1/4" />
         </div>
@@ -49,9 +79,12 @@ const LoginForm = () => {
             type="text"
             name="password"
             placeholder="Senha"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setPasswordTouched(true);
+            }}
             value={password}
-            className="p-1 border-b w-full border-textColor focus:border-primary outline-none placeholder-textColor bg-transparent"
+            className={passwordTouched && !validPassword ? 'invalid' : 'valid'}
           />
           <MdKey className="absolute right-3 top-1/4" />
         </div>
@@ -71,6 +104,10 @@ const LoginForm = () => {
           <button className="bg-primary px-4 py-2 min-[1110px]:px-6 min-[1110px]:py-3 rounded-lg shadow-sm hover:bg-greenLight">
             <FaArrowRightLong className="text-white" />
           </button>
+        </div>
+
+        <div>
+          <p className="text-center text-red-600">{message}</p>
         </div>
       </form>
     </>
