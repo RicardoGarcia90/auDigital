@@ -44,7 +44,7 @@ const ResetPasswordForm = () => {
 
           {/* VOLTAR */}
           <Link
-            to="/"
+            to="/auDigital"
             className="text-blue hover:text-blueLight hover:underline"
           >
             Voltar
