@@ -2,7 +2,7 @@ import React from 'react';
 import loginImg from '../../assets/imagens/login-img.png';
 import CardAuth from './CardAuth';
 import LoginForm from './LoginForm';
-import Form from './SectionForm';
+import SectionForm from './SectionForm';
 
 const Login = () => {
   return (
@@ -13,9 +13,9 @@ const Login = () => {
       </div>
 
       {/* FORM */}
-      <Form textH3={'Login'} textP={'Preencha os campos para acessar'}>
+      <SectionForm textH3={'Login'} textP={'Preencha os campos para acessar'}>
         <LoginForm />
-      </Form>
+      </SectionForm>
     </CardAuth>
   );
 };

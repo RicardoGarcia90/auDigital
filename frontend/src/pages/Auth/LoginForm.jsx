@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
-import { MdKey } from 'react-icons/md';
+import { LuEye } from 'react-icons/lu';
+import { LuEyeOff } from 'react-icons/lu';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -11,6 +12,7 @@ const LoginForm = () => {
   const [validPassword, setValidPassword] = useState(true);
   const [emailTouched, setEmailTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     if (emailTouched) {
@@ -24,6 +26,10 @@ const LoginForm = () => {
       setValidPassword(isValidPassword);
     }
   }, [email, password, emailTouched, passwordTouched]);
+
+  function handleShowPassword() {
+    setShowPassword((show) => !show);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -76,7 +82,7 @@ const LoginForm = () => {
 
         <div className="relative">
           <input
-            type="text"
+            type={showPassword ? 'text' : 'password'}
             name="password"
             placeholder="Senha"
             onChange={(e) => {
@@ -86,7 +92,10 @@ const LoginForm = () => {
             value={password}
             className={passwordTouched && !validPassword ? 'invalid' : 'valid'}
           />
-          <MdKey className="absolute right-3 top-1/4" />
+          <button type="button" onClick={handleShowPassword}>
+            {!showPassword && <LuEye className="absolute right-3 top-1/4" />}
+            {showPassword && <LuEyeOff className="absolute right-3 top-1/4" />}
+          </button>
         </div>
 
         {/* PASSWORD RESET LINK AND BUTTON LOGIN*/}
