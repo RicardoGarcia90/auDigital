@@ -7,7 +7,7 @@ function Rota() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/auDigital" element={<Login />} />
         <Route path="/reset" element={<ResetPassword />} />
       </Routes>
     </Router>
