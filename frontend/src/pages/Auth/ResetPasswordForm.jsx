@@ -1,25 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoPerson } from 'react-icons/io5';
-import { FaArrowRightLong } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const ResetPasswordForm = () => {
   const [email, setEmail] = useState('');
+  const [validEmail, setValidEmail] = useState(true);
+  const [emailTouched, setEmailTouched] = useState(false);
 
-  const isValidEmail =
-    email.length != 0 && email.includes('@') && email.includes('.com');
+  useEffect(() => {
+    if (emailTouched) {
+      const isValidEmail =
+        email.length != 0 && email.includes('@') && email.includes('.com');
+      setValidEmail(isValidEmail);
+    }
+  }, [email, emailTouched]);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!isValidEmail) {
-      alert('Digite um email válido!');
-      return;
+    setEmailTouched(true);
+
+    const isValidEmail =
+      email.length != 0 && email.includes('@') && email.includes('.com');
+
+    if (isValidEmail) {
+      const user = { email: email };
+      console.log(user);
+      setEmail('');
+      setEmailTouched(false);
     }
+  }
 
-    console.log(email);
-
-    setEmail('');
+  let message;
+  if (emailTouched && !validEmail) {
+    message = 'Digite um e-mail válido';
   }
 
   return (
@@ -30,9 +44,12 @@ const ResetPasswordForm = () => {
             type="text"
             name="email"
             placeholder="E-mail"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setEmailTouched(true);
+            }}
             value={email}
-            className="p-1 border-b w-full border-textColor focus:border-primary outline-none placeholder-textColor bg-transparent"
+            className={emailTouched && !validEmail ? 'invalid' : 'valid'}
           />
           <IoPerson className="absolute right-3 top-1/4" />
         </div>
@@ -49,6 +66,10 @@ const ResetPasswordForm = () => {
           >
             Voltar
           </Link>
+
+          <div>
+            <p className="text-center text-red-600">{message}</p>
+          </div>
         </div>
       </form>
     </>

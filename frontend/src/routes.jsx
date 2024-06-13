@@ -8,7 +8,7 @@ function Rota() {
     <Router>
       <Routes>
         <Route path="/auDigital" element={<Login />} />
-        <Route path="/reset" element={<ResetPassword />} />
+        <Route path="/auDigital/reset" element={<ResetPassword />} />
       </Routes>
     </Router>
   );

@@ -54,9 +54,9 @@ const LoginForm = () => {
   let message;
   if (emailTouched && passwordTouched) {
     if (!validEmail && !validPassword) {
-      message = 'Digite um email e uma senha para entrar.';
+      message = 'Digite um e-mail e uma senha para entrar.';
     } else if (!validEmail) {
-      message = 'Digite um email válido!';
+      message = 'Digite um e-mail válido!';
     } else if (!validPassword) {
       message = 'Digite uma senha válida (Mínimo 6 dígitos)!';
     }
@@ -103,7 +103,7 @@ const LoginForm = () => {
           <div className="flex gap-2 text-sm min-[1110px]:text-base">
             <span>Esqueceu a senha?</span>
             <Link
-              to="/reset"
+              to="/auDigital/reset"
               className="text-blue hover:text-blueLight hover:underline"
             >
               Resetar
