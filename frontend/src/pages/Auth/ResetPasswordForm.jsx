@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { IoPerson } from 'react-icons/io5';
+import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const ResetPasswordForm = () => {
+const ResetPasswordForm = ({ onConfirmMessage }) => {
   const [email, setEmail] = useState('');
   const [validEmail, setValidEmail] = useState(true);
   const [emailTouched, setEmailTouched] = useState(false);
@@ -26,6 +27,8 @@ const ResetPasswordForm = () => {
     if (isValidEmail) {
       const user = { email: email };
       console.log(user);
+
+      onConfirmMessage(true);
       setEmail('');
       setEmailTouched(false);
     }
@@ -62,9 +65,10 @@ const ResetPasswordForm = () => {
           {/* VOLTAR */}
           <Link
             to="/auDigital"
-            className="text-blue hover:text-blueLight hover:underline"
+            className="text-blue hover:text-blueLight hover:underline flex items-center gap-1"
           >
-            Voltar
+            <FaArrowLeft />
+            <span>Voltar</span>
           </Link>
 
           <div>
