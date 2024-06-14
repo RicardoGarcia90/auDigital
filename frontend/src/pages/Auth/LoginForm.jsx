@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
 import { LuEye } from 'react-icons/lu';
 import { LuEyeOff } from 'react-icons/lu';
+
+const testUser = {
+  email: 'teste@teste.com',
+  password: '123456',
+};
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -13,6 +18,7 @@ const LoginForm = () => {
   const [emailTouched, setEmailTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (emailTouched) {
@@ -43,6 +49,14 @@ const LoginForm = () => {
 
     if (isValidEmail && isValidPassword) {
       const user = { email: email, password: password };
+      if (
+        user.email === testUser.email &&
+        user.password === testUser.password
+      ) {
+        navigate('/auDigital/home');
+      } else {
+        alert('E-mail ou senha inválidos');
+      }
       console.log(user);
       setEmail('');
       setPassword('');
