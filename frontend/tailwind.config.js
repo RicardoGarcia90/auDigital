@@ -10,10 +10,12 @@ export default {
         primary: '#00BF63',
         bgTheme: '#F5F5F5',
         bgCard: '#CCCCCC',
+        bgCardHover: '#B2AFAF',
         textColor: '#333333',
         blue: '#004AAD',
         blueLight: '#4896FD',
         greenLight: '#65D89F',
+        bgFooter: '#FFF0DE',
       },
       container: {
         center: true,
