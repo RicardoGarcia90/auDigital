@@ -6,10 +6,10 @@ const MainContent = () => {
       <div className="flex justify-center items-center py-20">
         <div className="grid grid-cols-2 gap-5">
           <span className="bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center">
-            Cadastro de novo auluno
+            Alunos
           </span>
           <span className="bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center">
-            Cadastro de planos
+            Planos
           </span>
           <span className="bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center">
             Gerenciamento de pagamentos
