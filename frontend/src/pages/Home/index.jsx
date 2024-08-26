@@ -1,21 +1,17 @@
-import React from 'react';
-
 import Header from '../../components/layout/Header';
-import MainContent from './MainContent';
+import HomeMainContent from './HomeMainContent';
 import Footer from '../../components/layout/Footer';
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <div className="bg-white w-full min-h-screen">
         <div className="flex flex-col items-center mt-10 ">
           <Header />
-          <MainContent />
+          <HomeMainContent />
           <Footer />
         </div>
       </div>
     </>
   );
-};
-
-export default Home;
+}

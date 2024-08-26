@@ -1,6 +1,4 @@
-import React from 'react';
-
-const MainContent = () => {
+export default function HomeMainContent() {
   return (
     <>
       <div className="flex justify-center items-center py-20">
@@ -27,6 +25,4 @@ const MainContent = () => {
       </div>
     </>
   );
-};
-
-export default MainContent;
+}

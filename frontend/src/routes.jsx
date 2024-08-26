@@ -1,8 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Auth/Login';
 import ResetPassword from './pages/Auth/ResetPassword';
-import Home from './pages/Home';
+import Home from './pages/Home/index';
 
 function Rota() {
   return (
