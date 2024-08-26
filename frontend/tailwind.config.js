@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: '#00BF63',
         bgTheme: '#F5F5F5',
+        bgHeader: '#eaeaea',
         bgCard: '#CCCCCC',
         bgCardHover: '#B2AFAF',
         textColor: '#333333',

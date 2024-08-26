@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-white w-full min-h-screen">
-        <div className="flex flex-col items-center mt-10 ">
+        <div className="flex flex-col items-center ">
           <Header />
           <HomeMainContent />
           <Footer />
