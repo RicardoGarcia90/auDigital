@@ -1,6 +1,6 @@
 [
   {
-    "id": "5c88fa8cf4afda39709c2959",
+    "id": 2024001,
     "dogName": "Rex",
     "gender": "Macho",
     "breed": "Labrador",
@@ -13,7 +13,7 @@
     "ownerPhone": "(11) 91234-5678"
   },
   {
-    "id": "5c88fa8cf4afda39709c2960",
+    "id": 2024002,
     "dogName": "Luna",
     "gender": "Fêmea",
     "breed": "Poodle",
@@ -26,7 +26,7 @@
     "ownerPhone": "(11) 99876-5432"
   },
   {
-    "id": "5c88fa8cf4afda39709c2961",
+    "id": 2024003,
     "dogName": "Thor",
     "gender": "Macho",
     "breed": "German Shepherd",
@@ -39,7 +39,7 @@
     "ownerPhone": "(21) 98765-4321"
   },
   {
-    "id": "5c88fa8cf4afda39709c2962",
+    "id": 2024004,
     "dogName": "Bella",
     "gender": "Fêmea",
     "breed": "Golden Retriever",
@@ -52,7 +52,7 @@
     "ownerPhone": "(19) 91234-5678"
   },
   {
-    "id": "5c88fa8cf4afda39709c2963",
+    "id": 2024005,
     "dogName": "Max",
     "gender": "Macho",
     "breed": "Beagle",
@@ -65,7 +65,7 @@
     "ownerPhone": "(31) 99876-5432"
   },
   {
-    "id": "5c88fa8cf4afda39709c2964",
+    "id": 2024006,
     "dogName": "Maggie",
     "gender": "Fêmea",
     "breed": "French Bulldog",
@@ -78,7 +78,7 @@
     "ownerPhone": "(41) 98765-4321"
   },
   {
-    "id": "5c88fa8cf4afda39709c2965",
+    "id": 2024007,
     "dogName": "Toby",
     "gender": "Macho",
     "breed": "Shih Tzu",
@@ -91,7 +91,7 @@
     "ownerPhone": "(71) 91234-5678"
   },
   {
-    "id": "5c88fa8cf4afda39709c2966",
+    "id": 2024008,
     "dogName": "Sasha",
     "gender": "Fêmea",
     "breed": "Dachshund",
@@ -104,7 +104,7 @@
     "ownerPhone": "(51) 99876-5432"
   },
   {
-    "id": "5c88fa8cf4afda39709c2967",
+    "id": 2024009,
     "dogName": "Buddy",
     "gender": "Macho",
     "breed": "Cocker Spaniel",
@@ -117,7 +117,7 @@
     "ownerPhone": "(48) 98765-4321"
   },
   {
-    "id": "5c88fa8cf4afda39709c2968",
+    "id": 2024010,
     "dogName": "Nina",
     "gender": "Fêmea",
     "breed": "Border Collie",
@@ -128,5 +128,18 @@
     "ownerName": "Carla Ribeiro",
     "ownerEmail": "carla.ribeiro@email.com",
     "ownerPhone": "(85) 91234-5678"
+  },
+  {
+    "id": 2024011,
+    "dogName": "Astro",
+    "gender": "Macho",
+    "breed": "Border Colie",
+    "dateOfBirth": "2021-09-21",
+    "weight": "25kg",
+    "neutered": true,
+    "address": "Rua do Ouvidor, 480, São Paulo, SP",
+    "ownerName": "Ivy Tentoni",
+    "ownerEmail": "IvyTentoni@gmail.com",
+    "ownerPhone": "(11) 99955-4466"
   }
 ]
