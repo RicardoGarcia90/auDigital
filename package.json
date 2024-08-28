@@ -1,5 +1,17 @@
 {
   "dependencies": {
     "react-icons": "^5.3.0"
-  }
+  },
+  "name": "audigital",
+  "description": "Sistema de gerenciamento de creche para cães",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "npm run build --prefix frontend && npm run build --prefix backend",
+    "start": "npm run start --prefix backend && npm run start --prefix frontend",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "freepioneer",
+  "license": "ISC"
 }
