@@ -17,6 +17,24 @@ app.get('/api/v1/clients', (req, res) => {
   });
 });
 
+app.get('/api/v1/clients/:id', (req, res) => {
+  const id = req.params.id * 1;
+  const client = clients.find((el) => el.id === id);
+
+  if (!client) {
+    return res.status(404).json({ status: 'fail', message: 'Invalid Id' });
+  }
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      client,
+    },
+  });
+});
+
+// CONTINUAR EM 55 => HANDLING PATCH REQUESTS
+
 app.post('/api/v1/clients', (req, res) => {
   // console.log(req.body);
 
@@ -38,8 +56,6 @@ app.post('/api/v1/clients', (req, res) => {
     }
   );
 });
-
-// CONTINUAR EM 54 - RESPONDING TO URL PARAMETERS
 
 const port = 3000;
 app.listen(port, () => {
