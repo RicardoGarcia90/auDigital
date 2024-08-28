@@ -1,4 +1,3 @@
-import React from 'react';
 import loginImg from '../../assets/imagens/login-img.png';
 import CardAuth from './CardAuth';
 import LoginForm from './LoginForm';
