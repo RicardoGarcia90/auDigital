@@ -49,8 +49,10 @@ export default function HomeMainContent() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex justify-center items-center py-20">
-        <div className="grid grid-cols-2 gap-5">
+      <div className="flex justify-center items-center py-20 ">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {/* CONTINUAR COM AJUSTE DO GRID */}
+
           {servicesData.map((service) => (
             <div
               key={service.id}
@@ -58,7 +60,7 @@ export default function HomeMainContent() {
               onClick={() => navigate(service.pathPage)}
             >
               <span className="text-3xl">{service.icon}</span>
-              <span>{service.name}</span>
+              <span className="text-xl sm:text-2xl">{service.name}</span>
             </div>
           ))}
         </div>

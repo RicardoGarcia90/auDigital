@@ -6,13 +6,13 @@ import logo from '../../assets/imagens/logo-svg-semFundo.svg';
 const Header = () => {
   return (
     <>
-      <div className="flex justify-around items-center w-full py-3 bg-bgHeader">
+      <div className="flex justify-between items-center w-full py-3 bg-bgHeader">
         <img src={imgDog1} alt="Imagem header dog" />
         <div className="flex justify-cente items-center">
           <span>
             <img src={logo} alt="Logo AuDigital" className="h-20" />
           </span>
-          <p className="text-2xl">
+          <p className="text-xl sm:text-center">
             Transformando o cuidado dos peludos em uma experiência digital
             perfeita!
           </p>
