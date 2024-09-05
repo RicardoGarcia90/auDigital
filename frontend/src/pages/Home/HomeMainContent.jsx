@@ -49,18 +49,16 @@ export default function HomeMainContent() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex justify-center items-center py-20 ">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {/* CONTINUAR COM AJUSTE DO GRID */}
-
+      <div className="container py-20">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {servicesData.map((service) => (
             <div
               key={service.id}
               className="flex justify-center items-center gap-4 bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center"
               onClick={() => navigate(service.pathPage)}
             >
-              <span className="text-3xl">{service.icon}</span>
-              <span className="text-xl sm:text-2xl">{service.name}</span>
+              <span className="text-2xl">{service.icon}</span>
+              <span className="text-xl">{service.name}</span>
             </div>
           ))}
         </div>

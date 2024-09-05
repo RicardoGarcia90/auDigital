@@ -7,15 +7,15 @@ import { RxExit } from 'react-icons/rx';
 function NavMenu() {
   return (
     <>
-      <div className="container bg-primary w-full h-14 flex justify-between items-center">
-        <div className="flex justify-center items-center gap-4">
+      <div className="bg-primary w-full h-14 flex justify-between items-center">
+        <div className="flex justify-center items-center gap-4 ml-3">
           <Link className="text-primary bg-bgTheme p-2 rounded-full hover:scale-110 duration-150">
             <GoHomeFill className="text-2xl" />
           </Link>
           <p className="text-xl">Olá, Ricardo!</p>
         </div>
 
-        <div className="flex justify-between items-center gap-6">
+        <div className="flex justify-between items-center gap-6 mr-3">
           <div className="inline-block relative">
             <button>
               <FaSearch className="absolute left-2 top-6 transform translate-y-[-50%] text-xl text-primary hover:scale-125 duration-150" />
