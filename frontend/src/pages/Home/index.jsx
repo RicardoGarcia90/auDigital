@@ -2,7 +2,7 @@ import Header from '../../components/layout/Header';
 import HomeMainContent from './HomeMainContent';
 import Footer from '../../components/layout/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <div className="bg-white w-full min-h-screen">
@@ -14,4 +14,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

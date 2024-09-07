@@ -5,6 +5,7 @@ import { FaRegAddressCard } from 'react-icons/fa6';
 import { TbReportSearch } from 'react-icons/tb';
 import { FaPeopleGroup } from 'react-icons/fa6';
 import { useNavigate } from 'react-router-dom';
+import MainContent from '../../components/layout/MainContent';
 
 const servicesData = [
   {
@@ -45,24 +46,24 @@ const servicesData = [
   },
 ];
 
-export default function HomeMainContent() {
+const HomeMainContent = () => {
   const navigate = useNavigate();
   return (
-    <>
-      <div className="container py-20">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {servicesData.map((service) => (
-            <div
-              key={service.id}
-              className="flex justify-center items-center gap-4 bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center"
-              onClick={() => navigate(service.pathPage)}
-            >
-              <span className="text-2xl">{service.icon}</span>
-              <span className="text-xl">{service.name}</span>
-            </div>
-          ))}
-        </div>
+    <MainContent>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {servicesData.map((service) => (
+          <div
+            key={service.id}
+            className="flex justify-center items-center gap-4 bg-bgCard hover:bg-bgCardHover hover:cursor-pointer p-10 rounded-3xl text-center"
+            onClick={() => navigate(service.pathPage)}
+          >
+            <span className="text-2xl">{service.icon}</span>
+            <span className="text-xl">{service.name}</span>
+          </div>
+        ))}
       </div>
-    </>
+    </MainContent>
   );
-}
+};
+
+export default HomeMainContent;

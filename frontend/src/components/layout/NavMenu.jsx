@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { RxExit } from 'react-icons/rx';
 
-function NavMenu() {
+const NavMenu = () => {
   return (
     <>
       <div className="bg-primary w-full h-14 flex justify-between items-center">
@@ -23,7 +23,7 @@ function NavMenu() {
 
             <input
               type="text"
-              className="pl-10 p-2 rounded-xl min-w-[400px] bg-bgTheme text-xl"
+              className="px-10 py-2 rounded-xl bg-bgTheme text-xl"
             />
           </div>
 
@@ -36,6 +36,6 @@ function NavMenu() {
       </div>
     </>
   );
-}
+};
 
 export default NavMenu;
