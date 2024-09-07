@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Auth/Login';
 import ResetPassword from './pages/Auth/ResetPassword';
 import Home from './pages/Home/index';
-import StudentManagement from './pages/StudentManagement/StudentManagement';
+import StudentManagement from './pages/StudentManagement/index';
 import PlanRegistration from './pages/PlanRegistration/PlanRegistration';
 import PaymentManagement from './pages/PaymentManagement/PaymentManagement';
 import PortalAccessRegistration from './pages/PortalAccessRegistration/PortalAccessRegistration';

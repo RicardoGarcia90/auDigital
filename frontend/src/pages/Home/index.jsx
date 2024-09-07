@@ -1,13 +1,15 @@
 import Header from '../../components/layout/Header';
 import HomeMainContent from './HomeMainContent';
 import Footer from '../../components/layout/Footer';
+import NavMenuHome from '../../components/layout/NavMenuHome';
 
 const Home = () => {
   return (
     <>
-      <div className="bg-white w-full min-h-screen">
+      <div className="pagesDefaultStyles">
         <div>
           <Header />
+          <NavMenuHome />
           <HomeMainContent />
           <Footer />
         </div>

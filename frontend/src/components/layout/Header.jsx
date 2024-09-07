@@ -1,4 +1,3 @@
-import NavMenu from './NavMenu';
 import imgDog1 from '../../assets/imagens/header-img/img-header.svg';
 import imgDog2 from '../../assets/imagens/header-img/img-header2.svg';
 import logo from '../../assets/imagens/logo-svg-semFundo.svg';
@@ -20,7 +19,6 @@ const Header = () => {
 
         <img src={imgDog2} alt="Imagem header dog" />
       </div>
-      <NavMenu />
     </>
   );
 };
