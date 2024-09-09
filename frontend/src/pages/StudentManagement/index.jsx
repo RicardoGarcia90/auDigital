@@ -7,7 +7,7 @@ function StudentManagement() {
   return (
     <div className="pagesDefaultStyles">
       <Header />
-      <div className="flex">
+      <div className="grid grid-cols-[5%_95%]">
         <NavMenu />
         <StudentManagementMainContent />
       </div>
