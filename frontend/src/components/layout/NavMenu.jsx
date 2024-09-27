@@ -8,7 +8,7 @@ import logo from '../../assets/imagens/logo-svg-semFundo.svg';
 const NavMenu = () => {
   return (
     <>
-      <div className="bg-primary h-screen w-20 flex flex-col justify-between items-center">
+      <div className="bg-primary h-full w-20 flex flex-col justify-between items-center">
         <Link
           to={'/auDigital/Home'}
           className="text-primary bg-bgTheme p-3 mt-2 rounded-full hover:scale-110 duration-150"
