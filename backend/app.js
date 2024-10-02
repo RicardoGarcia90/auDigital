@@ -1,15 +1,30 @@
 const fs = require("fs");
 const express = require("express");
+const morgan = require("morgan");
 
 const app = express();
 
+// 1) MIDDLEWARES
+app.use(morgan("dev"));
+
+// CONTINUAR EM 61=> IMPLEMENTING THE 'USERS' ROUTES
+
 app.use(express.json());
+
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
 
 const clients = JSON.parse(fs.readFileSync(`${__dirname}/data/clients.json`));
 
+// 2) ROUTE HANDLERS
 const getAllClients = (req, res) => {
+  console.log(req.requestTime);
+
   res.status(200).json({
     status: "success",
+    requestAt: req.requestTime,
     results: clients.length,
     data: {
       clients,
@@ -91,6 +106,7 @@ const deleteClient = (req, res) => {
 // app.patch("/api/v1/clients/:id", updateClient);
 // app.delete("/api/v1/clients/:id", deleteClient);
 
+// 3) ROUTES
 app.route("/api/v1/clients").get(getAllClients).post(createClient);
 app
   .route("/api/v1/clients/:id")
@@ -98,8 +114,7 @@ app
   .patch(updateClient)
   .delete(deleteClient);
 
-// CONTINUAR EM AULA 59 => CREATING OUR OWN MIDDLEWARE
-
+// 4) START SERVER
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}...`);
