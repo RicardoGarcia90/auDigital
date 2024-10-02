@@ -7,7 +7,7 @@ function StudentManagement() {
   return (
     <div className="pagesDefaultStyles">
       <Header />
-      <div className="grid grid-cols-[5%_95%]">
+      <div className="grid grid-cols-[15%_85%]">
         <NavMenu />
         <StudentManagementMainContent />
       </div>

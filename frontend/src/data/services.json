@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Gerenciamento de AUlunos",
+        "icon": "FaPaw",
+        "pathPage": "/auDigital/studentManagement"
+    },
+    {
+        "id": 1,
+        "name": "Cadastro de planos",
+        "icon": "TbDeviceIpadDollar",
+        "pathPage": "/auDigital/planRegistration"
+    },
+    {
+        "id": 2,
+        "name": "Gerenciamento de pagamentos",
+        "icon": "MdOutlineAttachMoney",
+        "pathPage": "/auDigital/paymentManagement"
+    },
+    {
+        "id": 3,
+        "name": "Cadastro de acesso ao Portal",
+        "icon": "FaRegAddressCard",
+        "pathPage": "/auDigital/portalAccessRegistration"
+    },
+    {
+        "id": 4,
+        "name": "Relatórios",
+        "icon": "TbReportSearch",
+        "pathPage": "/auDigital/reports"
+    },
+    {
+        "id": 5,
+        "name": "Funcionários",
+        "icon": "FaPeopleGroup",
+        "pathPage": "/auDigital/employees"
+    }
+]
